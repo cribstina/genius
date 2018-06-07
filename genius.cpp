@@ -1,22 +1,57 @@
 #include <SDL.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include "g_func.h"
 
 //Constantes de dimensao da tela
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
-int main (int argc, char* args[])
+int main ( int argc, char* args[] )
 {
-    //Inicializa SDL
-    SDL_Init(SDL_INIT_EVERYTHING);
+    //Inicializa SDL e cria janela
+    if ( !inicia() )
+    {
+        printf( "Falha na inicializacao\n ");
+    }
+    else
+    {
+        //Carrega midia
+        if ( !loadMedia() )
+        {
+            printf( "Falha no carregamento da midia!\n" );
+        }
+        else
+        {
+            //Loop
+            bool quit = false;
 
-    //Codigo
+            //Event handler do SDL
+            SDL_Event e;
 
+            while ( !quit )
+            {
+                //Eventos
+                while( SDL_PollEvent( &e ) != 0 )
+                {
+                    //Atividade de saida do usuario
+                    if( e.type == SDL_QUIT)
+                    {
+                        quit = true;
+                    }
+                }
 
+                //Aplica imagem
+                SDL_BlitSurface( geniusBg, NULL, gScreenSurface, NULL );
 
-    //Termina SDL
-    SDL_Quit();
+                //Atualiza tela
+                SDL_UpdateWindowSurface( gWindow );
+
+            }
+        }
+    }
+
+    close();
 
     return 0;
 }
