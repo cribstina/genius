@@ -5,11 +5,11 @@
 void comeca_jogo();
 
 //tudo pisca
-//imagem aceso.bmp quando tudo acende
+//imagem tudo_aceso.bmp quando tudo acende
 void tudo_acende();
 
 //cores piscam individualmente
-//imagens com o nome assim: cor_acesa.bmp com o nome da cor correspondente no lugar de "cor"
+//imagens com o nome assim: cor_aceso.bmp com o nome da cor correspondente no lugar de "cor"
 void azul_pisca();
 void vermelho_pisca();
 void amarelo_pisca();
@@ -22,6 +22,8 @@ void aperta_vermelho();
 void aperta_amarelo();
 void aperta_verde();
 
+//usuario acerta todas as sequencias previstas
+void parabens();
 
 //usuario erra jogada, game over
 //imagem acabou.bmp
