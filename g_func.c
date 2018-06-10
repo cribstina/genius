@@ -61,10 +61,10 @@ void comeca_jogo();
 //Descricao: gera uma sequencia (vetor) aleatoria de n numeros entre 0 e 3
 void gera_sequencia(int tamanho, int *sequencia) {
     int numero, aux;
-	srand(time(NULL));
-	for (aux = 0; aux < tamanho; aux++) {
-		numero = rand() % 4;
-		*(sequencia+aux) = numero;
+    srand(time(NULL));
+    for (aux = 0; aux < tamanho; aux++) {
+	numero = rand() % 4;
+	*(sequencia+aux) = numero;
     }
 }
 
