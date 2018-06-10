@@ -1,3 +1,6 @@
+#include <stdlib.h>
+#include <time.h>
+
 /*Implementacao das funcoes*/
 
 
