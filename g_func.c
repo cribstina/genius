@@ -58,6 +58,8 @@ SDL_Surface* geniusBg = NULL;
 //imagem meio_down.bmp quando aperta o botão
 void comeca_jogo();
 
+//Descricao: gera uma sequencia (vetor) aleatoria de n numeros entre 0 e 3
+void gera_sequencia(int tamanho, int *sequencia);
 
 //Descricao: cores piscam individualmente de acordo com o numero gerado pelo programa
 //imagens com o nome assim: cor_acesa.bmp com o nome da cor correspondente no lugar de "cor"
