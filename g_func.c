@@ -1,8 +1,22 @@
 #include <stdlib.h>
 #include <time.h>
+#include <SDL.h>
+#include <stdio.h>
 
 /*Implementacao das funcoes*/
 
+//Janela
+SDL_Window* gWindow = NULL;
+
+//Superficie da janela
+SDL_Surface* gScreenSurface = NULL;
+
+//Imagem que vai ser carregada a principio
+SDL_Surface* geniusBg = NULL;
+
+//Constantes de dimensao da tela
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
 
 //Descricao: inicia o SDL e carrega tela
 bool inicia()
@@ -48,14 +62,6 @@ bool loadMedia()
     return success;
 }
 
-//Janela
-SDL_Window* gWindow = NULL;
-
-//Superficie da janela
-SDL_Surface* gScreenSurface = NULL;
-
-//Imagem que vai ser carregada a principio
-SDL_Surface* geniusBg = NULL;
 
 //Descricao: inicia o jogo apos o usuario apertar o botao do meio
 //imagem meio_down.bmp quando aperta o botão
