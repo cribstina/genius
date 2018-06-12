@@ -1,4 +1,20 @@
+#ifndef G_FUNC_H_INCLUDED
+#define G_FUNC_H_INCLUDED
+
 /* Declara funcoes necessarias ao funcionamento do GENIUS */
+
+//Constantes de dimensao da tela
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
+
+//Janela
+extern SDL_Window* gWindow;
+
+//Superficie da janela
+extern SDL_Surface* gScreenSurface;
+
+//Imagem que vai ser carregada a principio
+extern SDL_Surface* geniusBg;
 
 //Descricao: inicia o SDL e carrega tela
 bool inicia();
@@ -34,3 +50,6 @@ void game_over();
 
 //Libera midia e termina SDL
 void close();
+
+
+#endif // G_FUNC_H_INCLUDED
